@@ -1,13 +1,13 @@
-![FANAKDZ PKG + Assassin's Creed DZ + Rockstar DZ + Konami DZ + God of War DZ](banner.png)
+![FANAKDZ PKG + Assassin's Creed DZ + Rockstar DZ + Konami DZ + God of War DZ + Cars DZ](banner.png)
 
 # متجر FANAKDZ للـ PlayStation 4
 
-خمس حزم (fake PKG) لتشغيل مكتبة ألعاب على PS4 مكسور الحماية: تتصفّح الألعاب
+ستّ حزم (fake PKG) لتشغيل مكتبة ألعاب على PS4 مكسور الحماية: تتصفّح الألعاب
 بالصور، ثم تنزّل وتثبّت اللعبة مباشرة من الجهاز — **بدون حاسوب**.
 
 ---
 
-## 📦 الحزم الخمس
+## 📦 الحزم الستّ
 
 | الحزمة | المعرّف | الوصف |
 |---|---|---|
@@ -16,12 +16,13 @@
 | `IV0000-FANK00003_00-ROCKSTARDZ000000.pkg` | FANK00003 | **Rockstar DZ** — ألعاب Rockstar فقط |
 | `IV0000-FANK00004_00-KONAMIDZ00000000.pkg` | FANK00004 | **Konami DZ** — ألعاب Konami فقط |
 | `IV0000-FANK00005_00-GODOFWARDZ000000.pkg` | FANK00005 | **God of War DZ** — ألعاب God of War فقط |
+| `IV0000-FANK00006_00-CARSDZ0000000000.pkg` | FANK00006 | **Cars DZ** — كل ألعاب السيارات والسباق |
 
 الحزم **تطبيقات مستقلّة**: تُثبَّت معًا ولا تمحو إحداها الأخرى، ولكل واحدة
 أيقونتها وصورتها الخاصة في مكتبة الجهاز. تطبيقات الرفوف
-(**Assassin's Creed DZ** · **Rockstar DZ** · **Konami DZ** · **God of War DZ**)
-تعرض ألعابها فقط بمجرد الفتح ولا تحتاج أي إعداد، بينما **FANAKDZ PKG** يعرض
-المكتبة كاملة.
+(**Assassin's Creed DZ** · **Rockstar DZ** · **Konami DZ** · **God of War DZ**
+· **Cars DZ**) تعرض ألعابها فقط بمجرد الفتح ولا تحتاج أي إعداد، بينما
+**FANAKDZ PKG** يعرض المكتبة كاملة.
 
 الألعاب التي يعرضها كل تطبيق مأخوذة من المكتبة نفسها (866 لعبة):
 
@@ -32,6 +33,11 @@
 | Rockstar DZ | Grand Theft Auto V · Red Dead Redemption · Red Dead Redemption 2 · L.A. Noire |
 | Konami DZ | METAL GEAR SOLID · METAL GEAR SOLID 2: Sons of Liberty · METAL GEAR SOLID 3: Snake Eater · METAL GEAR SOLID V · SUPER BOMBERMAN R 2 · ZONE OF THE ENDERS: The 2nd Runner M∀RS · PES 2025 · eFootball |
 | God of War DZ | God of War · God of War Ragnarök · God of War III |
+| Cars DZ | **31 لعبة سباق / قيادة** (918 غيغا): Need for Speed Heat · Payback · Rivals · Gran Turismo 7 (US/EU) · Gran Turismo SPORT · Assetto Corsa · Competizione · DIRT 5 · DiRT Rally · DiRT Rally 2.0 · GRID Legends · The Crew 2 · Trackmania Turbo · Wreckfest · Burnout Paradise · DRIVECLUB · HOT WHEELS UNLEASHED 2 · ONRUSH · Crash Team Racing · Mantis Burn Racing · Neon Drive · SnowRunner · MudRunner · Expeditions: A Mudrunner Game · Ride 4 · MotoGP 24 · MX vs ATV Legends · Monster Energy Supercross 6 · Trials Fusion · Trials Rising |
+
+> **Cars DZ** يجمع كل ألعاب السيارات والسباق في المكتبة، ومعها ألعاب الدرّاجات
+> والطُرق الوعرة (MotoGP · Ride 4 · Supercross · Trials). إن أردت إزالة صنف
+> معيّن أخبرني وأعيد بناء الحزمة.
 
 ---
 
@@ -39,7 +45,7 @@
 
 * PS4 مكسور الحماية (GoldHEN أو أي HEN يعمل).
 * اتصال بالإنترنت على الجهاز (Wi‑Fi أو كابل).
-* مساحة كافية في `/data` (اللعبة الواحدة قد تصل إلى 90 غيغا، والتثبيت يستهلك
+* مساحة كافية في `/data` (اللعبة الواحدة قد تصل إلى 114 غيغا، والتثبيت يستهلك
   الضعف مؤقتًا: التنزيل + التثبيت).
 
 ---
@@ -69,6 +75,7 @@ curl -T IV0000-FANK00002_00-ASSASSINSCREEDZ0.pkg  ftp://192.168.x.x:2121/data/pk
 curl -T IV0000-FANK00003_00-ROCKSTARDZ000000.pkg  ftp://192.168.x.x:2121/data/pkg/
 curl -T IV0000-FANK00004_00-KONAMIDZ00000000.pkg  ftp://192.168.x.x:2121/data/pkg/
 curl -T IV0000-FANK00005_00-GODOFWARDZ000000.pkg  ftp://192.168.x.x:2121/data/pkg/
+curl -T IV0000-FANK00006_00-CARSDZ0000000000.pkg  ftp://192.168.x.x:2121/data/pkg/
 ```
 
 **2) ثبّت من الجهاز**
@@ -115,6 +122,7 @@ curl -T IV0000-FANK00005_00-GODOFWARDZ000000.pkg  ftp://192.168.x.x:2121/data/pk
 | `/data/rockstar_store.txt` | كلمات رفّ Rockstar (اختياري — للتعديل فقط) |
 | `/data/konami_store.txt` | كلمات رفّ Konami (اختياري — للتعديل فقط) |
 | `/data/godofwar_store.txt` | كلمات رفّ God of War (اختياري — للتعديل فقط) |
+| `/data/cars_store.txt` | كلمات رفّ السيارات (اختياري — للتعديل فقط) |
 
 > تطبيقات الرفوف تعمل **بدون** أي ملف إعداد: قائمة ألعابها مدمجة داخل التطبيق.
 > الملفات أعلاه للتخصيص فقط إن أردت تغيير الرفّ.
@@ -139,14 +147,14 @@ curl -T IV0000-FANK00005_00-GODOFWARDZ000000.pkg  ftp://192.168.x.x:2121/data/pk
   محليًّا لتعمل بسرعة عند كل فتح.
 * التثبيت يستخدم خدمة **BGFT** الرسمية في النظام (نفس طريقة الألعاب العادية).
 * التنزيل مُقسَّم إلى عدّة أقسام متوازية لتسريع التحميل، ويستأنف بعد الانقطاع.
-* التطبيقات الخمسة تُبنى من مصدر واحد، وكل تطبيق نسخة مستقلة بمعرّف خاص
-  (`FANK00001` … `FANK00005`).
+* التطبيقات الستّ تُبنى من مصدر واحد، وكل تطبيق نسخة مستقلة بمعرّف خاص
+  (`FANK00001` … `FANK00006`).
 
 ---
 
 ## English
 
-Five PlayStation 4 homebrew packages (fake PKG) — no PC needed.
+Six PlayStation 4 homebrew packages (fake PKG) — no PC needed.
 
 | File | Title ID | Description |
 |---|---|---|
@@ -155,9 +163,10 @@ Five PlayStation 4 homebrew packages (fake PKG) — no PC needed.
 | `IV0000-FANK00003_00-ROCKSTARDZ000000.pkg` | FANK00003 | **Rockstar DZ** — Rockstar games only |
 | `IV0000-FANK00004_00-KONAMIDZ00000000.pkg` | FANK00004 | **Konami DZ** — Konami games only |
 | `IV0000-FANK00005_00-GODOFWARDZ000000.pkg` | FANK00005 | **God of War DZ** — God of War games only |
+| `IV0000-FANK00006_00-CARSDZ0000000000.pkg` | FANK00006 | **Cars DZ** — every racing / driving game |
 
 The shelf builds show their own games as soon as they open, no setup at all;
-the full store shows the whole library. All five can be installed side by side.
+the full store shows the whole library. All six can be installed side by side.
 
 **Install**
 
