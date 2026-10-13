@@ -1,21 +1,32 @@
-![FANAKDZ PKG + Assassin's Creed DZ](banner.png)
+![FANAKDZ PKG + Assassin's Creed DZ + Rockstar DZ](banner.png)
 
 # متجر FANAKDZ للـ PlayStation 4
 
-حزمتان (fake PKG) لتشغيل مكتبة ألعاب على PS4 مكسور الحماية: تتصفّح الألعاب
+ثلاث حزم (fake PKG) لتشغيل مكتبة ألعاب على PS4 مكسور الحماية: تتصفّح الألعاب
 بالصور، ثم تنزّل وتثبّت اللعبة مباشرة من الجهاز — **بدون حاسوب**.
 
 ---
 
-## 📦 الحزمتان
+## 📦 الحزم الثلاث
 
 | الحزمة | المعرّف | الوصف |
 |---|---|---|
-| `IV0000-FANK00001_00-FANAKDZPKG000000.pkg` | FANK00001 | **FANAKDZ PKG** — المتجر الكامل (مكتبة ضخمة من الألعاب) |
-| `IV0000-FANK00002_00-ASSASSINSCREEDZ0.pkg` | FANK00002 | **Assassin's Creed DZ** — تطبيق منفصل لألعاب Assassin's Creed فقط |
+| `IV0000-FANK00001_00-FANAKDZPKG000000.pkg` | FANK00001 | **FANAKDZ PKG** — المتجر الكامل بكل الألعاب |
+| `IV0000-FANK00002_00-ASSASSINSCREEDZ0.pkg` | FANK00002 | **Assassin's Creed DZ** — ألعاب Assassin's Creed فقط |
+| `IV0000-FANK00003_00-ROCKSTARDZ000000.pkg` | FANK00003 | **Rockstar DZ** — ألعاب Rockstar فقط |
 
-الحزمتان **تطبيقان مستقلّان**: تُثبَّتان معًا ولا تمحو إحداهما الأخرى، ولكل
-واحدة أيقونتها وصورتها في مكتبة الجهاز.
+الحزم **تطبيقات مستقلّة**: تُثبَّت معًا ولا تمحو إحداها الأخرى، ولكل واحدة
+أيقونتها وصورتها الخاصة في مكتبة الجهاز. تطبيقا **Assassin's Creed DZ** و
+**Rockstar DZ** يعرضان ألعابهما فقط بمجرّد الفتح (لا يحتاجان أي إعداد)، بينما
+**FANAKDZ PKG** يعرض المكتبة كاملة.
+
+الألعاب التي يعرضها كل تطبيق مأخوذة من المكتبة نفسها (866 لعبة):
+
+| التطبيق | الألعاب |
+|---|---|
+| FANAKDZ PKG | المكتبة كاملة (866 لعبة) |
+| Assassin's Creed DZ | Chronicles Trilogy · III · IV Black Flag · Mirage · Odyssey · Origins · Rogue · Syndicate · The Ezio Collection · Unity · Valhalla |
+| Rockstar DZ | Grand Theft Auto V · Red Dead Redemption · Red Dead Redemption 2 · L.A. Noire |
 
 ---
 
@@ -50,6 +61,7 @@
 ```bash
 curl -T IV0000-FANK00001_00-FANAKDZPKG000000.pkg  ftp://192.168.x.x:2121/data/pkg/
 curl -T IV0000-FANK00002_00-ASSASSINSCREEDZ0.pkg  ftp://192.168.x.x:2121/data/pkg/
+curl -T IV0000-FANK00003_00-ROCKSTARDZ000000.pkg  ftp://192.168.x.x:2121/data/pkg/
 ```
 
 **2) ثبّت من الجهاز**
@@ -92,7 +104,11 @@ curl -T IV0000-FANK00002_00-ASSASSINSCREEDZ0.pkg  ftp://192.168.x.x:2121/data/pk
 | `/data/pkg` | التنزيلات وملفات `.pkg` الجاهزة |
 | `/data/fanakdz.log` | سجل التطبيق (يُقرأ عبر FTP عند أي مشكلة) |
 | `/data/fanakdz_cookie.txt` | جلسة تسجيل الدخول إلى archive.org |
-| `/data/fanakdz_store.txt` | كلمات المكتبة الإضافية (كلمة في كل سطر) |
+| `/data/fanakdz_store.txt` | كلمات رفّ FANAKDZ / Assassin's Creed (كلمة في كل سطر) |
+| `/data/rockstar_store.txt` | كلمات رفّ Rockstar (اختياري — للتعديل فقط) |
+
+> تطبيقا Assassin's Creed و Rockstar يعملان **بدون** أي ملف إعداد: قائمة
+> ألعابهما مدمجة داخل التطبيق. الملفان أعلاه للتخصيص فقط إن أردت تغيير الرفّ.
 
 ---
 
@@ -110,21 +126,28 @@ curl -T IV0000-FANK00002_00-ASSASSINSCREEDZ0.pkg  ftp://192.168.x.x:2121/data/pk
 
 ## 🔧 ملاحظات تقنية
 
-* التطبيق يعتمد على مكتبة عامة من موقع archive.org، ويُخزِّن قائمة الألعاب
-  محليًّا ليعمل بسرعة عند كل فتح.
+* التطبيقات تعتمد على مكتبة عامة من موقع archive.org، وتُخزِّن قائمة الألعاب
+  محليًّا لتعمل بسرعة عند كل فتح.
 * التثبيت يستخدم خدمة **BGFT** الرسمية في النظام (نفس طريقة الألعاب العادية).
 * التنزيل مُقسَّم إلى عدّة أقسام متوازية لتسريع التحميل، ويستأنف بعد الانقطاع.
+* التطبيقات الثلاثة تُبنى من مصدر واحد، وكل تطبيق نسخة مستقلة بمعرّف خاص
+  (`FANK00001` / `FANK00002` / `FANK00003`).
 
 ---
 
 ## English
 
-Two PlayStation 4 homebrew packages (fake PKG) — no PC needed.
+Three PlayStation 4 homebrew packages (fake PKG) — no PC needed.
 
 | File | Title ID | Description |
 |---|---|---|
 | `IV0000-FANK00001_00-FANAKDZPKG000000.pkg` | FANK00001 | **FANAKDZ PKG** — the full game store |
 | `IV0000-FANK00002_00-ASSASSINSCREEDZ0.pkg` | FANK00002 | **Assassin's Creed DZ** — Assassin's Creed games only |
+| `IV0000-FANK00003_00-ROCKSTARDZ000000.pkg` | FANK00003 | **Rockstar DZ** — Rockstar games only |
+
+The two shelf builds show their own games as soon as they open, no setup at
+all; the full store shows the whole library. All three can be installed side
+by side.
 
 **Install**
 
@@ -132,7 +155,7 @@ Two PlayStation 4 homebrew packages (fake PKG) — no PC needed.
    (`curl -T file.pkg ftp://<console-ip>:2121/data/pkg/`), or put it on a
    FAT32/exFAT USB stick.
 2. On the console open **GoldHEN → Package Installer**, pick the file and
-   press **Install**. Both packages can be installed side by side.
+   press **Install**.
 
 **Controls** — `X` download & install, `O` cancel, `△` sign in to
 archive.org, `L1/R1` page, `L2/R2` jump. Downloads land in `/data/pkg`.
