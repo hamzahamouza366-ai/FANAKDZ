@@ -1,24 +1,25 @@
-![FANAKDZ PKG + Assassin's Creed DZ + Rockstar DZ](banner.png)
+![FANAKDZ PKG + Assassin's Creed DZ + Rockstar DZ + Konami DZ](banner.png)
 
 # متجر FANAKDZ للـ PlayStation 4
 
-ثلاث حزم (fake PKG) لتشغيل مكتبة ألعاب على PS4 مكسور الحماية: تتصفّح الألعاب
+أربع حزم (fake PKG) لتشغيل مكتبة ألعاب على PS4 مكسور الحماية: تتصفّح الألعاب
 بالصور، ثم تنزّل وتثبّت اللعبة مباشرة من الجهاز — **بدون حاسوب**.
 
 ---
 
-## 📦 الحزم الثلاث
+## 📦 الحزم الأربع
 
 | الحزمة | المعرّف | الوصف |
 |---|---|---|
 | `IV0000-FANK00001_00-FANAKDZPKG000000.pkg` | FANK00001 | **FANAKDZ PKG** — المتجر الكامل بكل الألعاب |
 | `IV0000-FANK00002_00-ASSASSINSCREEDZ0.pkg` | FANK00002 | **Assassin's Creed DZ** — ألعاب Assassin's Creed فقط |
 | `IV0000-FANK00003_00-ROCKSTARDZ000000.pkg` | FANK00003 | **Rockstar DZ** — ألعاب Rockstar فقط |
+| `IV0000-FANK00004_00-KONAMIDZ00000000.pkg` | FANK00004 | **Konami DZ** — ألعاب Konami فقط |
 
 الحزم **تطبيقات مستقلّة**: تُثبَّت معًا ولا تمحو إحداها الأخرى، ولكل واحدة
-أيقونتها وصورتها الخاصة في مكتبة الجهاز. تطبيقا **Assassin's Creed DZ** و
-**Rockstar DZ** يعرضان ألعابهما فقط بمجرّد الفتح (لا يحتاجان أي إعداد)، بينما
-**FANAKDZ PKG** يعرض المكتبة كاملة.
+أيقونتها وصورتها الخاصة في مكتبة الجهاز. تطبيقات الرفوف
+(**Assassin's Creed DZ** · **Rockstar DZ** · **Konami DZ**) تعرض ألعابها فقط
+بمجرد الفتح ولا تحتاج أي إعداد، بينما **FANAKDZ PKG** يعرض المكتبة كاملة.
 
 الألعاب التي يعرضها كل تطبيق مأخوذة من المكتبة نفسها (866 لعبة):
 
@@ -27,6 +28,7 @@
 | FANAKDZ PKG | المكتبة كاملة (866 لعبة) |
 | Assassin's Creed DZ | Chronicles Trilogy · III · IV Black Flag · Mirage · Odyssey · Origins · Rogue · Syndicate · The Ezio Collection · Unity · Valhalla |
 | Rockstar DZ | Grand Theft Auto V · Red Dead Redemption · Red Dead Redemption 2 · L.A. Noire |
+| Konami DZ | METAL GEAR SOLID · METAL GEAR SOLID 2: Sons of Liberty · METAL GEAR SOLID 3: Snake Eater · METAL GEAR SOLID V · SUPER BOMBERMAN R 2 · ZONE OF THE ENDERS: The 2nd Runner M∀RS · PES 2025 · eFootball |
 
 ---
 
@@ -62,6 +64,7 @@
 curl -T IV0000-FANK00001_00-FANAKDZPKG000000.pkg  ftp://192.168.x.x:2121/data/pkg/
 curl -T IV0000-FANK00002_00-ASSASSINSCREEDZ0.pkg  ftp://192.168.x.x:2121/data/pkg/
 curl -T IV0000-FANK00003_00-ROCKSTARDZ000000.pkg  ftp://192.168.x.x:2121/data/pkg/
+curl -T IV0000-FANK00004_00-KONAMIDZ00000000.pkg  ftp://192.168.x.x:2121/data/pkg/
 ```
 
 **2) ثبّت من الجهاز**
@@ -106,9 +109,10 @@ curl -T IV0000-FANK00003_00-ROCKSTARDZ000000.pkg  ftp://192.168.x.x:2121/data/pk
 | `/data/fanakdz_cookie.txt` | جلسة تسجيل الدخول إلى archive.org |
 | `/data/fanakdz_store.txt` | كلمات رفّ FANAKDZ / Assassin's Creed (كلمة في كل سطر) |
 | `/data/rockstar_store.txt` | كلمات رفّ Rockstar (اختياري — للتعديل فقط) |
+| `/data/konami_store.txt` | كلمات رفّ Konami (اختياري — للتعديل فقط) |
 
-> تطبيقا Assassin's Creed و Rockstar يعملان **بدون** أي ملف إعداد: قائمة
-> ألعابهما مدمجة داخل التطبيق. الملفان أعلاه للتخصيص فقط إن أردت تغيير الرفّ.
+> تطبيقات الرفوف تعمل **بدون** أي ملف إعداد: قائمة ألعابها مدمجة داخل التطبيق.
+> الملفات أعلاه للتخصيص فقط إن أردت تغيير الرفّ.
 
 ---
 
@@ -130,24 +134,24 @@ curl -T IV0000-FANK00003_00-ROCKSTARDZ000000.pkg  ftp://192.168.x.x:2121/data/pk
   محليًّا لتعمل بسرعة عند كل فتح.
 * التثبيت يستخدم خدمة **BGFT** الرسمية في النظام (نفس طريقة الألعاب العادية).
 * التنزيل مُقسَّم إلى عدّة أقسام متوازية لتسريع التحميل، ويستأنف بعد الانقطاع.
-* التطبيقات الثلاثة تُبنى من مصدر واحد، وكل تطبيق نسخة مستقلة بمعرّف خاص
-  (`FANK00001` / `FANK00002` / `FANK00003`).
+* التطبيقات الأربعة تُبنى من مصدر واحد، وكل تطبيق نسخة مستقلة بمعرّف خاص
+  (`FANK00001` / `FANK00002` / `FANK00003` / `FANK00004`).
 
 ---
 
 ## English
 
-Three PlayStation 4 homebrew packages (fake PKG) — no PC needed.
+Four PlayStation 4 homebrew packages (fake PKG) — no PC needed.
 
 | File | Title ID | Description |
 |---|---|---|
 | `IV0000-FANK00001_00-FANAKDZPKG000000.pkg` | FANK00001 | **FANAKDZ PKG** — the full game store |
 | `IV0000-FANK00002_00-ASSASSINSCREEDZ0.pkg` | FANK00002 | **Assassin's Creed DZ** — Assassin's Creed games only |
 | `IV0000-FANK00003_00-ROCKSTARDZ000000.pkg` | FANK00003 | **Rockstar DZ** — Rockstar games only |
+| `IV0000-FANK00004_00-KONAMIDZ00000000.pkg` | FANK00004 | **Konami DZ** — Konami games only |
 
-The two shelf builds show their own games as soon as they open, no setup at
-all; the full store shows the whole library. All three can be installed side
-by side.
+The shelf builds show their own games as soon as they open, no setup at all;
+the full store shows the whole library. All four can be installed side by side.
 
 **Install**
 
